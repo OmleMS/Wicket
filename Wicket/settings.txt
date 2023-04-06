@@ -1,0 +1,43 @@
+settings
+{
+	main
+	{
+		Description: "please end my suffering"
+		Mode Name: "I am in constant pain"
+	}
+
+	lobby
+	{
+		Allow Players Who Are In Queue: Yes
+		Map Rotation: After A Game
+		Max Spectators: 12
+		Return To Lobby: After A Game
+	}
+
+	modes
+	{
+		disabled Assault
+		{
+			Game Mode Start: Immediately
+			Kill Cam: Off
+			Skins: Off
+		}
+
+		Control
+		{
+			Score To Win: 2
+		}
+
+		Escort
+
+		Hybrid
+
+		Push
+
+		General
+		{
+			Competitive Rules: On
+			Limit Roles: 1 Tank 2 Offense 2 Support
+		}
+	}
+}

@@ -1,0 +1,16 @@
+rule("Pos. Log")
+{
+	event
+	{
+		Ongoing - Each Player;
+		All;
+		All;
+	}
+
+	actions
+	{
+		Log To Inspector(Local Vector Of(Vector(0, 0, 0), All Players(Team 1), Rotation And Translation));
+		Wait (0.100, Ignore Condition);
+		Loop If Condition Is True;
+	}
+}
