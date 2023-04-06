@@ -26,13 +26,33 @@ settings
 		Control
 		{
 			Score To Win: 2
+
+			enabled maps
+			{
+			}
 		}
 
 		Escort
+		{
+			enabled maps
+			{
+			}
+		}
 
 		Hybrid
+		{
+			enabled maps
+			{
+			}
+		}
 
 		Push
+		{
+			enabled maps
+			{
+				Esperança 0
+			}
+		}
 
 		General
 		{

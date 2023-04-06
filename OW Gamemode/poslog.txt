@@ -1,4 +1,4 @@
-rule("Pos. Log")
+rule("Pos. Log With Player Info")
 {
 	event
 	{
@@ -7,10 +7,17 @@ rule("Pos. Log")
 		All;
 	}
 
+	conditions
+	{
+		Is Game In Progress == True;
+		Is Moving(Event Player) == True;
+	}
+
 	actions
 	{
-		Log To Inspector(Local Vector Of(Vector(0, 0, 0), All Players(Team 1), Rotation And Translation));
-		Wait (0.100, Ignore Condition);
+		Log To Inspector(Custom String("{0}, {1}", Local Vector Of(Vector(0, 0, 0), Event Player, Rotation And Translation), Custom String(
+			"{0}, {1}, {2}", Event Player, Team Of(Event Player), Hero Of(Event Player))));
+		Wait(0.100, Abort When False);
 		Loop If Condition Is True;
 	}
 }
